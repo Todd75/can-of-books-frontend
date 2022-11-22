@@ -49,7 +49,9 @@ class BestBooks extends React.Component {
                     alt="book placeholder"
                   />
                   <Carousel.Caption>
-                    <p id="bookNameID">{this.state.books.name}</p>
+                    <p id="bookNameID">{oneBook.title}</p>
+                    <p>{oneBook.description}</p>
+                    <p>{oneBook.status}</p>
                   </Carousel.Caption>
                   
               </Carousel.Item>
