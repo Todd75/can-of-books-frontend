@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import BestBooks from './BestBooks';
-import About from './About.js';
+import About from './About';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import {
@@ -16,16 +16,21 @@ class App extends React.Component {
     return (
       <>
         <Router>
-          <Header id="header"/>
+          <Header id="header" />
           <Routes>
-            <Route 
+            <Route
               exact path="/"
               element={<BestBooks />}
             >
             </Route>
+            <Route
+            path="/about.js"
+            element={<About />}
+          >
+          </Route>
             {/* PLACEHOLDER: add a route with a path of '/about' that renders the `About` component */}
           </Routes>
-          <About exact path='/About'></About>
+          
           <Footer />
         </Router>
       </>
