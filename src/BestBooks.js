@@ -1,7 +1,6 @@
 import React from 'react';
-import Carousel from "react-bootstrap/Carousel";
-// import BookCard from "./BookCard";
-// import BookForModal from "./BookForModal";
+import Carousel from 'react-bootstrap/Carousel';
+
 
 let axios = require('axios')
 class BestBooks extends React.Component {
@@ -29,6 +28,9 @@ class BestBooks extends React.Component {
     }
   };
 
+  componentDidMount = async () => {
+    this.getBooks();
+  }
 
 
   render() {
@@ -47,7 +49,7 @@ class BestBooks extends React.Component {
                     alt="book placeholder"
                   />
                   <Carousel.Caption>
-                    
+                    <p id="bookNameID">{this.state.books.name}</p>
                   </Carousel.Caption>
                   
               </Carousel.Item>
