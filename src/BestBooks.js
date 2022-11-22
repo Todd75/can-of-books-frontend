@@ -27,9 +27,10 @@ class BestBooks extends React.Component {
       this.setState({ error: true });
     }
   };
-
+  
   componentDidMount = async () => {
     this.getBooks();
+    this.handlePostBooks();
   }
 
 
