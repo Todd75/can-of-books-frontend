@@ -39,22 +39,22 @@ Finish time: 2:38
 
 Actual time needed to complete: 1 hour 8 minutes
 
-Name of feature:
+Name of feature: getData from Database
 
-Estimate of time needed to complete:
+Estimate of time needed to complete: 2 hours
 
-Start time:
+Start time: 3pm 
 
-Finish time:
+Finish time: 5pm
 
-Actual time needed to complete:
+Actual time needed to complete: 2 hours
 
-Name of feature:
+Name of feature:deploy front and back end working together
 
-Estimate of time needed to complete:
+Estimate of time needed to complete: 1 hour
 
-Start time:
+Start time: 6pm 
 
-Finish time:
+Finish time: 7:30 
 
-Actual time needed to complete:
+Actual time needed to complete: 1.5 hours
