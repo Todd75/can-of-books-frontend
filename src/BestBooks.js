@@ -27,23 +27,32 @@ class BestBooks extends React.Component {
       this.setState({ error: true });
     }
   };
+
+  postBooks = async (aBook) => {
+    let url = `${process.env.REACT_APP_SERVER_URL}/books`;
+    try {
+      let postResult = await axios.post(url, aBook);
+      this.setState({
+        books: [...this.state.books, postResult]
+      });
+    } catch(err) {
+      console.log(err);
+      this.setState({ error: true });
+    };
+  };
   
   componentDidMount = async () => {
     this.getBooks();
-    this.handlePostBooks();
   }
 
-
   render() {
-
-    /* TODO: render all the books in a Carousel */
 
     return (
       <>
         {this.state.books.length > 0 ? (
           <Carousel variant="dark">
-            {this.state.books.map((oneBook) => (
-              <Carousel.Item>
+            {this.state.books.map((oneBook, idx) => (
+              <Carousel.Item key={idx}>
                 
                   <img
                     src="https://media.istockphoto.com/photos/row-of-books-on-a-shelf-multicolored-book-spines-stack-in-the-picture-id1222550815?b=1&k=20&m=1222550815&s=170667a&w=0&h=MTxBeBrrrYtdlpzhMpD1edwLYQf3OPgkNeDEgIzYJww="
