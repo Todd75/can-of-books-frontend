@@ -1,14 +1,15 @@
 import React from 'react';
 import { Navbar, NavItem } from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import './App.css'
 
 class Header extends React.Component {
   render() {
     return (
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
         <Navbar.Brand>My Favorite Books</Navbar.Brand>
-        <NavItem><Link to="/About.js" className="nav-link">About Us</Link></NavItem>
-        <NavItem><Link to="/" className="nav-link">Home</Link></NavItem>
+        <NavItem><Link to="/About.js" className="nav-link" id="aboutLink">About Us</Link></NavItem>
+        <NavItem><Link to="/" className="nav-link" id="homeLink">Home</Link></NavItem>
         {/* PLACEHOLDER: render a navigation link to the about page */}
       </Navbar>
     )
