@@ -6,14 +6,14 @@ import Container from 'react-bootstrap/Container';
 import { ListGroup } from "react-bootstrap";
 
 
-class AddBook extends Component {
+class RemoveBook extends Component {
 
     render () {
         let books = this.props.books.map((book) => (
             <Book 
             book={book}
             key={book._id}
-            // deleteBook={this.props.deleteBook}
+            deleteBook={this.props.deleteBook}
             />
         ));
         return (
@@ -26,3 +26,4 @@ class AddBook extends Component {
     }
 }
 
+export default RemoveBook;
