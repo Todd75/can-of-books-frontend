@@ -89,11 +89,12 @@ class BestBooks extends React.Component {
                   <p id="bookNameID">{oneBook.title}</p>
                   <p>{oneBook.description}</p>
                   <p>{oneBook.status}</p>
-                </Carousel.Caption>
-                <Button 
+                  <Button 
                   onClick={() => this.deleteBook(oneBook._id)}>
                     Remove Book
                 </Button>
+                </Carousel.Caption>
+                
               </Carousel.Item>
             ))}
           </Carousel>
