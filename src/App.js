@@ -19,6 +19,7 @@ class App extends React.Component {
     this.state = {isModalShown: false};
     
   };
+  
   handleCloseModal = () => {
     this.setState({
       isModalShown: false
