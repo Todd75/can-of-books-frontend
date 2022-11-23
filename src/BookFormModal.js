@@ -34,14 +34,8 @@ class BookFormModal extends React.Component {
                     </Form>
                 </Modal>
             </>
-
-
         )
-
-    }
-}
+    };
+};
 
 export default BookFormModal;
-
-
-

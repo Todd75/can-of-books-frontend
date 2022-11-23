@@ -1,6 +1,5 @@
 import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-// import { Form, Container, Button } from 'react-bootstrap';
+import { Carousel, Button} from 'react-bootstrap';
 import BookFormModal from './BookFormModal.js'
 let axios = require('axios')
 class BestBooks extends React.Component {
@@ -44,6 +43,7 @@ class BestBooks extends React.Component {
   componentDidMount = async () => {
     this.getBooks();
   }
+
   handleBookSubmit = (event) => {
     event.preventDefault();
     let newBook = {
@@ -55,7 +55,21 @@ class BestBooks extends React.Component {
     this.postBooks(newBook);
   }
 
-
+  deleteBook = async (id) => {
+    try {
+      console.log(this.state.books);
+      let url = `${process.env.REACT_APP_SERVER_URL}/books/${id}`;
+      
+      await axios.delete(url);
+      
+      let updatedBooks = this.state.books.filter(book => book._id !== id);
+      this.setState({
+        books: updatedBooks
+      })
+    } catch (err) {
+      console.log('We have an error: ', err.response.data);
+    }
+  }
 
 
   render() {
@@ -67,7 +81,6 @@ class BestBooks extends React.Component {
           <Carousel variant="dark">
             {this.state.books.map((oneBook, idx) => (
               <Carousel.Item key={idx}>
-
                 <img
                   src="https://media.istockphoto.com/photos/row-of-books-on-a-shelf-multicolored-book-spines-stack-in-the-picture-id1222550815?b=1&k=20&m=1222550815&s=170667a&w=0&h=MTxBeBrrrYtdlpzhMpD1edwLYQf3OPgkNeDEgIzYJww="
                   alt="book placeholder"
@@ -77,7 +90,10 @@ class BestBooks extends React.Component {
                   <p>{oneBook.description}</p>
                   <p>{oneBook.status}</p>
                 </Carousel.Caption>
-
+                <Button 
+                  onClick={() => this.deleteBook(oneBook._id)}>
+                    Remove Book
+                </Button>
               </Carousel.Item>
             ))}
           </Carousel>
