@@ -7,9 +7,17 @@ class BestBooks extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      books: []
+      books: [],
+      updatedBook: null
     }
   }
+
+  handleUpdateBook = (bookToUpdate) => {
+    this.setState({
+      updatedBook: bookToUpdate
+    });
+    this.props.openUpdateBookModal();
+  } 
 
   /* TODO: Make a GET request to your API to fetch all the books from the database  */
 
@@ -76,18 +84,18 @@ class BestBooks extends React.Component {
     e.preventDefault();
     
     let bookToUpdate = {
-      title: e.target.title.value || this.props.books.title,
-      description: e.target.description.value || this.props.books.title,
-      status: e.target.status.value || this.props.books.status,
-      _id: this.props.books._id,
-      __v: this.props.books.__v
+      title: e.target.title.value || this.state.updatedBook.title,
+      description: e.target.description.value || this.state.updatedBook.description,
+      status: e.target.status.value || this.state.updatedBook.status,
+      _id: this.state.updatedBook._id,
+      __v: this.state.updatedBook.__v
     };
-    // send bookToUpdate to the server
+    this.updatedBooks(bookToUpdate);
   };
 
   updatedBooks = async (bookToUpdate) => {
     try {
-      let url = `${process.env.REACT_APP_SERVER}/books/${bookToUpdate._id}`;
+      let url = `${process.env.REACT_APP_SERVER_URL}/books/${bookToUpdate._id}`;
       let updatedBookObj = await axios.put(url, bookToUpdate);
 
       let updatedBookArr = this.state.books.map(book => {
@@ -124,7 +132,7 @@ class BestBooks extends React.Component {
                     Remove Book
                   </Button>
                   
-                  <Button onClick={() => this.updatedBooks(oneBook._id)}>
+                  <Button onClick={() => this.handleUpdateBook(oneBook)}>
                     Update Book
                   </Button>
                 </Carousel.Caption>
@@ -137,15 +145,16 @@ class BestBooks extends React.Component {
           <h3>No Books Found</h3>
         )}
         <BookFormModal 
-          show={this.props.showModal}
-          onHide={this.props.closeModal}
+          show={this.props.showAddBookModal}
+          onHide={this.props.closeAddBookModal}
           submit={this.handleBookSubmit}
         />
 
         <UpdateBookForm 
-          show={this.props.showModal}
-          onHide={this.props.closeModal}
+          show={this.props.showUpdateBookModal}
+          onHide={this.props.closeUpdateBookModal}
           submit={this.handleUpDateBookSubmit}
+          books={this.state.books}
         />
 
       </>
@@ -155,12 +164,3 @@ class BestBooks extends React.Component {
 
 
 export default BestBooks;
-
-
-/* <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
-
-{this.state.books.length ? (
-  <p>Book Carousel coming soon</p>
-) : (
-  <h3>No Books Found :(</h3>
-)} */
