@@ -16,18 +16,34 @@ import {BrowserRouter as Router,
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {isModalShown: false};
+    this.state = {
+      isAddBookModalShown: false,
+      isUpdateBookModalShown: false
+    };
     
   };
-  handleCloseModal = () => {
+
+  handleCloseAddBookModal = () => {
     this.setState({
-      isModalShown: false
+      isAddBookModalShown: false
     });
   };
   
-  handleOpenModal= () => {
+  handleOpenAddBookModal= () => {
     this.setState({
-      isModalShown: true
+      isAddBookModalShown: true
+    });
+  };
+
+  handleCloseUpdateBookModal = () => {
+    this.setState({
+      isUpdateBookModalShown: false
+    });
+  };
+  
+  handleOpenUpdateBookModal= () => {
+    this.setState({
+      isUpdateBookModalShown: true
     });
   };
 
@@ -41,8 +57,11 @@ class App extends React.Component {
             <Route
               exact path="/"
               element={<BestBooks 
-                showModal={this.state.isModalShown} 
-                closeModal={this.handleCloseModal}/>
+                showAddBookModal={this.state.isAddBookModalShown} 
+                closeAddBookModal={this.handleCloseAddBookModal}
+                showUpdateBookModal={this.state.isUpdateBookModalShown}
+                closeUpdateBookModal={this.handleCloseUpdateBookModal}
+                openUpdateBookModal={this.handleOpenUpdateBookModal}/>
               }
             >
             </Route>
@@ -53,7 +72,7 @@ class App extends React.Component {
             </Route>
            
           </Routes>
-          <Button onClick={(this.handleOpenModal)}>Add Book</Button>
+          <Button onClick={(this.handleOpenAddBookModal)}>Add Book</Button>
           <Footer />
         </Router>
       </>

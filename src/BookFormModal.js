@@ -6,10 +6,6 @@ class BookFormModal extends React.Component {
 
     render() {
 
-
-
-
-
         return (
             <>
                 <Modal show={this.props.show} onHide={this.props.onHide}>
@@ -30,7 +26,7 @@ class BookFormModal extends React.Component {
                             <Form.Control type="text" />
                         </Form.Group>
                         <Button type="submit" variant="primary">Submit</Button>
-                        <Button typ="submit" onClick={this.props.onHide}>Close Form</Button>
+                        <Button type="submit" onClick={this.props.onHide}>Close Form</Button>
                     </Form>
                 </Modal>
             </>
