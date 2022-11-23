@@ -4,25 +4,12 @@ import { Container, Button, Form, Modal } from 'react-bootstrap';
 class UpdateBookForm extends React.Component {
   render() {
 
-  handleBookSubmit = (e) => {
-      e.preventDefault();
-      
-      let bookToUpdate = {
-        title: e.target.title.value || this.props.books.title,
-        description: e.target.description.value || this.props.books.title,
-        status: e.target.status.value || this.props.books.status,
-        _id: this.props.books._id,
-        __v: this.props.books.__v
-      };
-      // send bookToUpdate to the server
-    };
-
 
     return(
         <Container>
           <Modal show={this.props.show} onHide={this.props.onHide}>
             <Modal.Header>Update the Book</Modal.Header>
-            <Form onSubmit={this.handleBookSubmit}>
+            <Form onSubmit={this.props.submit}>
               <Form.Group controlId="title">
                 <Form.Label>Title</Form.Label> 
                 <Form.Control type="text" placeholder={this.props.books.title}></Form.Control>
