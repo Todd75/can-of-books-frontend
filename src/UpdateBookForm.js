@@ -7,9 +7,9 @@ class UpdateBookForm extends React.Component {
 
     return(
         <Container>
-          <Modal show={this.props.show} onHide={this.props.onHide}>
-            <Modal.Header>Update the Book</Modal.Header>
-            <Form onSubmit={this.props.submit}>
+          <Modal show={this.props.show} onHide={this.props.onHide} id="modalUpdateBook">
+            <Modal.Header closeButton id="modalUpdateBookHeader">Update the Book</Modal.Header>
+            <Form onSubmit={this.props.submit} id="formUpdateBook">
               <Form.Group controlId="title">
                 <Form.Label>Title</Form.Label> 
                 <Form.Control type="text" placeholder={this.props.books.title}></Form.Control>

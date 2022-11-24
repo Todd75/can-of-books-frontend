@@ -6,7 +6,8 @@ import About from './About';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import { Button } from 'react-bootstrap'
-import {BrowserRouter as Router,
+import {
+  BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
@@ -20,7 +21,7 @@ class App extends React.Component {
       isAddBookModalShown: false,
       isUpdateBookModalShown: false
     };
-    
+
   };
 
   handleCloseAddBookModal = () => {
@@ -28,8 +29,8 @@ class App extends React.Component {
       isAddBookModalShown: false
     });
   };
-  
-  handleOpenAddBookModal= () => {
+
+  handleOpenAddBookModal = () => {
     this.setState({
       isAddBookModalShown: true
     });
@@ -40,8 +41,8 @@ class App extends React.Component {
       isUpdateBookModalShown: false
     });
   };
-  
-  handleOpenUpdateBookModal= () => {
+
+  handleOpenUpdateBookModal = () => {
     this.setState({
       isUpdateBookModalShown: true
     });
@@ -56,12 +57,12 @@ class App extends React.Component {
           <Routes>
             <Route
               exact path="/"
-              element={<BestBooks 
-                showAddBookModal={this.state.isAddBookModalShown} 
+              element={<BestBooks
+                showAddBookModal={this.state.isAddBookModalShown}
                 closeAddBookModal={this.handleCloseAddBookModal}
                 showUpdateBookModal={this.state.isUpdateBookModalShown}
                 closeUpdateBookModal={this.handleCloseUpdateBookModal}
-                openUpdateBookModal={this.handleOpenUpdateBookModal}/>
+                openUpdateBookModal={this.handleOpenUpdateBookModal} />
               }
             >
             </Route>
@@ -70,9 +71,11 @@ class App extends React.Component {
               element={<About />}
             >
             </Route>
-           
+
           </Routes>
-          <Button onClick={(this.handleOpenAddBookModal)}>Add Book</Button>
+          <div id="addBookBtnDiv">
+            <button onClick={(this.handleOpenAddBookModal)} class="custom-btn btn-12" ><span>Click!</span><span>Add Book</span></button>
+          </div>
           <Footer />
         </Router>
       </>

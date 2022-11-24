@@ -14,8 +14,8 @@ class AddBook extends Component {
             />
         ));
         return (
-            <Container>
-                <ListGroup>
+            <Container id="bookDataContainer">
+                <ListGroup id="bookData">
                     {books}
                 </ListGroup>
             </Container>
@@ -27,9 +27,11 @@ class Book extends React.Component {
         return (
             <ListGroup.Item>
                 <Button 
+                    class="custom-btn btn-12"
                     onClick={() => this.props.handleDeleteBook(this.props.book._id)}
+                    id="deleteButton"
                   >
-                    Delete a Book
+                    
                   </Button>
             </ListGroup.Item>
         )

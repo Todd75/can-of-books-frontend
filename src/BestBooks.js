@@ -123,6 +123,7 @@ class BestBooks extends React.Component {
                 <img
                   src="https://media.istockphoto.com/photos/row-of-books-on-a-shelf-multicolored-book-spines-stack-in-the-picture-id1222550815?b=1&k=20&m=1222550815&s=170667a&w=0&h=MTxBeBrrrYtdlpzhMpD1edwLYQf3OPgkNeDEgIzYJww="
                   alt="book placeholder"
+                  
                 />
                 <Carousel.Caption>
                   <p id="bookNameID">{oneBook.title}</p>
