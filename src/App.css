@@ -1,20 +1,33 @@
 .nav-item {
-    color: red;
+    color: rgb(12, 8, 8);
     padding: 2px;
     margin: 5px;
+    font-size: 22px;
+    border: 2px solid transparent;
+    font-weight: 700;
 }
+
+.nav-item:hover {
+    border: 2px solid red;
+    border-radius: 5px;
+    color: red;
+
+}
+
 
 #entireNavBar {
-    height: 150px;
-
-
+    height: 200px;
 }
-div.carousel.slide.carousel-dark {
-    min-height: 70vh;
+
+.carousel.carousel-dark {
+    display: list-item;
+    margin-top: 120px;
 }
+
 div.container {
     align-content: center;
 }
+
 div.modal-content {
     text-align: center;
 
@@ -29,26 +42,14 @@ div.modal-content {
     font-size: 30px;
 }
 
-#root {
-    height: 100vh;
-
-}
-
 #navItemHome {
     float: right;
     margin-right: 20px;
 }
 
-#navHeader {
-    font-size: 115px;
-    float: left;
-    width: 90vw;
-    margin-left: 20px;
-    
-} 
 
 body {
-    background: linear-gradient(-45deg, #ff825c, #611c35, #2e5077, #c8ffbe);
+    background: linear-gradient(-45deg, #f3d8d0, #674f58, #4f5357, #f0f4ef);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     align-items: center;
@@ -58,32 +59,30 @@ body {
 }
 
 .animate-charcter {
-  text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
-  text-align: center;
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  /* text-fill-color: transparent; */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 5s linear infinite;
-  /* display: inline-block; */
-  font-size: 60px;
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            #fb0e11 0%,
+            #240f3a 19%,
+            #160e0e 57%,
+            #120704 100%);
+    text-align: center;
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 6s linear infinite;
+    /* display: inline-block; */
+    font-size: 66px;
 }
 
 @keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
+    to {
+        background-position: 200% center;
+    }
 }
 
 @keyframes gradient {
@@ -115,11 +114,13 @@ body {
         --rotate: 360deg;
     }
 }
+
 #addBookBtnDiv {
     display: grid;
     grid-template-columns: auto;
     justify-content: space-around;
 }
+
 .btn-12 {
     margin-top: 30px;
     padding: 3px;
@@ -213,3 +214,42 @@ body {
     transform: rotateX(-90deg);
 }
 
+#footerNav {
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.carousel-item img {
+    height: auto;
+    width: auto;
+    object-fit: fill;
+    border-radius: 5px;
+    padding: 2rem;
+    margin: auto;
+    display: block;
+}
+
+.carousel-caption {
+    /* border: 5px solid black; */
+    width: flex;
+    background-color: rgba(174, 172, 172, 0.0);
+    border-radius: 5px;
+    
+}
+
+.carousel-caption:hover {
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    transform: scale(1.01);
+    z-index: 10;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    background: ;
+}
+h3 {
+    color: rgb(255, 255, 255);
+}
+h3:hover {
+    color: black;
+}

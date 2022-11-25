@@ -2,6 +2,7 @@ import React from 'react';
 import { Carousel, Button} from 'react-bootstrap';
 import BookFormModal from './BookFormModal.js';
 import UpdateBookForm from './UpdateBookForm.js';
+import Image from 'react-bootstrap/Image'
 let axios = require('axios');
 class BestBooks extends React.Component {
   constructor(props) {
@@ -117,27 +118,33 @@ class BestBooks extends React.Component {
       <>
         {this.state.books.length > 0 ? (
 
-          <Carousel variant="dark">
+          <Carousel 
+          variant="dark" 
+          slide={false}
+          
+          
+          
+          >
             {this.state.books.map((oneBook, idx) => (
               <Carousel.Item key={idx}>
-                <img
-                  src="https://media.istockphoto.com/photos/row-of-books-on-a-shelf-multicolored-book-spines-stack-in-the-picture-id1222550815?b=1&k=20&m=1222550815&s=170667a&w=0&h=MTxBeBrrrYtdlpzhMpD1edwLYQf3OPgkNeDEgIzYJww="
+                <Image
+                  className="d-block w-90"
+                  src="https://cdn.pixabay.com/photo/2014/09/05/18/32/old-books-436498_960_720.jpg"
                   alt="book placeholder"
-                  
+                  fluid="true"
+                  height="500px"
                 />
-                <Carousel.Caption>
-                  <p id="bookNameID">{oneBook.title}</p>
-                  <p>{oneBook.description}</p>
-                  <p>{oneBook.status}</p>
-                  <Button onClick={() => this.deleteBook(oneBook._id)}>
+                <Carousel.Caption id="bookNameID">
+                  <h3>Book Title: {oneBook.title}</h3>
+                  <h3>Book Description: {oneBook.description}</h3>
+                  <h3>Have You Read This Book? {oneBook.status}</h3>
+                  <Button variant="secondary" onClick={() => this.deleteBook(oneBook._id)}>
                     Remove Book
                   </Button>
-                  
-                  <Button onClick={() => this.handleUpdateBook(oneBook)}>
+                  <Button onClick={() => this.handleUpdateBook(oneBook)} Custom Width Modal>
                     Update Book
                   </Button>
                 </Carousel.Caption>
-                
               </Carousel.Item>
             ))}
           </Carousel>

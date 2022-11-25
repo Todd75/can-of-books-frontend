@@ -12,7 +12,7 @@ class Header extends React.Component {
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center">
-              <h3 class="animate-charcter">My Favorite Book Collection</h3>
+              <h1 class="animate-charcter">A Collection Of Our Favorite Books</h1>
             </div>
           </div>
         </div>

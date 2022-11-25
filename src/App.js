@@ -5,7 +5,7 @@ import BestBooks from './BestBooks';
 import About from './About';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import { Button } from 'react-bootstrap'
+// import { Button } from 'react-bootstrap'
 import {
   BrowserRouter as Router,
   Routes,
@@ -65,6 +65,7 @@ class App extends React.Component {
                 openUpdateBookModal={this.handleOpenUpdateBookModal} />
               }
             >
+              
             </Route>
             <Route
               path="/about.js"
@@ -74,7 +75,7 @@ class App extends React.Component {
 
           </Routes>
           <div id="addBookBtnDiv">
-            <button onClick={(this.handleOpenAddBookModal)} class="custom-btn btn-12" ><span>Click!</span><span>Add Book</span></button>
+            <button onClick={(this.handleOpenAddBookModal)} class="custom-btn btn-12" ><span>Click Here!</span><span>Add Book</span></button>
           </div>
           <Footer />
         </Router>
