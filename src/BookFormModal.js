@@ -28,8 +28,8 @@ class BookFormModal extends React.Component {
                             <Form.Label>Have You Read This Book?</Form.Label>
                             <Form.Control type="text" placeholder="Yes or No" />
                         </Form.Group>
-                        <Button type="submit" variant="primary" id="submitBookBtn" >Submit Book</Button>
-                        <Button onClick={this.props.onHide} variant="secondary">Exit Form</Button>
+                        <Button type="submit" variant="primary" id="submitBookBtn" onClick={this.props.onHide} >Submit Book</Button>
+                        <Button onClick={this.props.onHide} variant="secondary" id="exitFormBtn">Exit Form</Button>
                     </Form>
                 </Modal>
             </>

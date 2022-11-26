@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Form, Modal } from 'react-bootstrap';
 import './UpdateBookForm.css'
+
 class UpdateBookForm extends React.Component {
   render() {
 
@@ -12,17 +13,17 @@ class UpdateBookForm extends React.Component {
           <Form onSubmit={this.props.submit} id="formUpdateBook">
             <Form.Group controlId="title">
               <Form.Label>Book Title:</Form.Label>
-              <Form.Control type="text" placeholder={this.props.books.title}></Form.Control>
+              <Form.Control type="text" placeholder="Update the Book Title"></Form.Control>
             </Form.Group>
             <Form.Group controlId="description">
               <Form.Label>Book Description:</Form.Label>
-              <Form.Control type="text" placeholder={this.props.books.description}></Form.Control>
+              <Form.Control type="text" placeholder="Update Book Description"></Form.Control>
             </Form.Group>
             <Form.Group controlId="status">
               <Form.Label>Have You Read This Book?</Form.Label>
-              <Form.Control type="text" placeholder={this.props.books.status}></Form.Control>
+              <Form.Control type="text" placeholder="Update Yes or No"></Form.Control>
             </Form.Group>
-            <button id="saveBtn" type="submit" onClick={this.props.onHide}><span id="saveBtnSpan">Save Changes</span></button>
+            <button id="saveBtn" type="submit" className="glow-on-hover" onClick={this.props.onHide}><span>Save Changes</span></button>
           </Form>
         </Modal>
       </Container>

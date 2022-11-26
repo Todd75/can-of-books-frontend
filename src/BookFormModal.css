@@ -1,5 +1,4 @@
 div.modal-content {
-    text-align: center;
     background: linear-gradient(298deg, #f3dec1, #fdfcfb, #f3dec1);
     background-size: 600% 600%;
     animation: AnimationName 22s ease infinite;
@@ -58,6 +57,34 @@ div.modal-content {
 }
 
 #submitBookBtn {
+    margin-top: 10px;
+    margin-left: 3px;
     background: linear-gradient(0deg, rgb(143, 205, 232) 0%, rgb(39, 75, 123) 100%);
     font-weight: 400;
+    border: none;
+    margin-bottom: 10px;
+    width: 170px;
+}
+#submitBookBtn:hover {
+    background: linear-gradient(0deg, rgb(40, 118, 149) 0%, rgb(5, 29, 63) 100%);
+    font-weight: 400;
+    border: none;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#exitFormBtn {
+    float: right;
+    margin-bottom: 10px;
+    background: linear-gradient(0deg, rgb(200, 201, 201) 0%, rgb(124, 125, 126) 100%);
+    font-weight: 400;
+    border: none;
+    margin-top: 10px;
+    margin-right: 3px;
+}
+
+#exitFormBtn:hover {
+    background: linear-gradient(0deg, rgb(107, 108, 108) 0%, rgb(49, 49, 50) 100%);
+    font-weight: 400;
+    border: none;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }

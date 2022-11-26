@@ -33,7 +33,6 @@ class BestBooks extends React.Component {
 
       this.setState({ books: result.data });
       this.setState({ error: false });
-      console.log(result);
 
     } catch (error) {
       console.error(error);
