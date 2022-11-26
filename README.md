@@ -29,6 +29,16 @@ Clone this repo to your own account with the green "Use this template" button. T
 
 ## Credit and Collaborations
 
+Button coding for animations was via Codepen from Deerbuck Designing free use code for non-commercial purposes. I used their format and integrated the code then modified it to suit our purposes.
+
+Unsplash.com provided the background image used for books.
+
+Main page background animation via CodePen from Alvaro who had free use code for anyone who follows him. I used his format then integrated and modified the code to suit the changes I wanted in timing.
+
+
+
+
+
 * **Name of feature:** Deploy Front and Back End
 * **Estimate of time needed to complete:** 1 hour
 * **Start time:** 1:30

@@ -5,32 +5,33 @@ import { ListGroup, Button, Container } from "react-bootstrap";
 
 class AddBook extends Component {
 
-    render () {
+    render() {
         let books = this.props.books.map((book) => (
-            <Book 
-            book={book}
-            key={book._id}
-            handleDeleteBook={this.props.handleDeleteBook}
+            <Book
+                book={book}
+                key={book._id}
+                handleDeleteBook={this.props.handleDeleteBook}
             />
         ));
         return (
-            <Container>
-                <ListGroup>
+            <Container id="bookDataContainer">
+                <ListGroup id="bookData">
                     {books}
                 </ListGroup>
             </Container>
-         );
+        );
     }
 }
 class Book extends React.Component {
-    render () {
+    render() {
         return (
             <ListGroup.Item>
-                <Button 
+                <Button
+                    className="custom-btn btn-12"
                     onClick={() => this.props.handleDeleteBook(this.props.book._id)}
-                  >
-                    Delete a Book
-                  </Button>
+                    id="deleteButton"
+                >
+                </Button>
             </ListGroup.Item>
         )
     }
