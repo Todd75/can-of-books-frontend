@@ -1,8 +1,12 @@
 import React from 'react';
-import { Carousel, Button} from 'react-bootstrap';
+import { Carousel, Button } from 'react-bootstrap';
 import BookFormModal from './BookFormModal.js';
 import UpdateBookForm from './UpdateBookForm.js';
 import Image from 'react-bootstrap/Image'
+import './App.css'
+
+
+
 let axios = require('axios');
 class BestBooks extends React.Component {
   constructor(props) {
@@ -18,7 +22,7 @@ class BestBooks extends React.Component {
       updatedBook: bookToUpdate
     });
     this.props.openUpdateBookModal();
-  } 
+  }
 
   /* TODO: Make a GET request to your API to fetch all the books from the database  */
 
@@ -60,7 +64,7 @@ class BestBooks extends React.Component {
       title: event.target.title.value,
       description: event.target.description.value,
       status: event.target.status.value
-    } 
+    }
     console.log(newBook);
     this.postBooks(newBook);
   }
@@ -69,9 +73,9 @@ class BestBooks extends React.Component {
     try {
       console.log(this.state.books);
       let url = `${process.env.REACT_APP_SERVER_URL}/books/${id}`;
-      
+
       await axios.delete(url);
-      
+
       let updatedBooks = this.state.books.filter(book => book._id !== id);
       this.setState({
         books: updatedBooks
@@ -83,7 +87,7 @@ class BestBooks extends React.Component {
 
   handleUpDateBookSubmit = (e) => {
     e.preventDefault();
-    
+
     let bookToUpdate = {
       title: e.target.title.value || this.state.updatedBook.title,
       description: e.target.description.value || this.state.updatedBook.description,
@@ -100,14 +104,14 @@ class BestBooks extends React.Component {
       let updatedBookObj = await axios.put(url, bookToUpdate);
 
       let updatedBookArr = this.state.books.map(book => {
-        return book._id === bookToUpdate._id 
+        return book._id === bookToUpdate._id
           ? updatedBookObj.data
           : book;
       });
       this.setState({
         books: updatedBookArr
       });
-    } catch(error) {
+    } catch (error) {
       console.log('Error: ', error.response.data);
     }
   }
@@ -116,14 +120,27 @@ class BestBooks extends React.Component {
 
     return (
       <>
+        <div className='light x1'></div>
+        <div className='light x2'></div>
+        <div className='light x3'></div>
+        <div className='light x4'></div>
+        <div className='light x5'></div>
+        <div className='light x6'></div>
+        <div className='light x7'></div>
+        <div className='light x8'></div>
+        <div className='light x9'></div>
+
+
+
+
         {this.state.books.length > 0 ? (
 
-          <Carousel 
-          variant="dark" 
-          slide={false}
-          
-          
-          
+          <Carousel
+            variant="dark"
+            slide={false}
+
+
+
           >
             {this.state.books.map((oneBook, idx) => (
               <Carousel.Item key={idx}>
@@ -138,11 +155,11 @@ class BestBooks extends React.Component {
                   <h3>Book Title: {oneBook.title}</h3>
                   <h3>Book Description: {oneBook.description}</h3>
                   <h3>Have You Read This Book? {oneBook.status}</h3>
-                  <Button variant="secondary" onClick={() => this.deleteBook(oneBook._id)}>
-                    Remove Book
-                  </Button>
-                  <Button onClick={() => this.handleUpdateBook(oneBook)} Custom Width Modal>
-                    Update Book
+                  <button id="neonShadow" type="submit" onClick={() => this.deleteBook(oneBook._id)}><span id="span2">Remove Book</span></button>
+                  <Button id="updateButton" onClick={() => this.handleUpdateBook(oneBook)} className="custom-btn btn-3">
+                    <span>
+                      Update Book
+                    </span>
                   </Button>
                 </Carousel.Caption>
               </Carousel.Item>
@@ -152,13 +169,13 @@ class BestBooks extends React.Component {
         ) : (
           <h3>No Books Found</h3>
         )}
-        <BookFormModal 
+        <BookFormModal
           show={this.props.showAddBookModal}
           onHide={this.props.closeAddBookModal}
           submit={this.handleBookSubmit}
         />
 
-        <UpdateBookForm 
+        <UpdateBookForm
           show={this.props.showUpdateBookModal}
           onHide={this.props.closeUpdateBookModal}
           submit={this.handleUpDateBookSubmit}

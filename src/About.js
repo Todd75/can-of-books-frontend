@@ -1,5 +1,6 @@
 import './About.css'
 import { Component } from "react";
+import './BookFormModal.js'
 
 class Profile extends Component {
 
@@ -7,9 +8,15 @@ class Profile extends Component {
     /* TODO: render information about the developers */
     return (
       <>
+        <div id="container">
+          <div className="content">
+            <h2>The Creators of This Website:</h2>
+            <h2>The Creators of This Website:</h2>
+          </div>
+        </div>
         <span id="aboutCards">
-          <div class="card1">
-            <div class="card1-inner">
+          <div className="card1">
+            <div className="card1-inner">
               <h2 id="h1P">Todd Wolden</h2>
               <img
                 src="https://avatars.githubusercontent.com/u/112423639?v=4"
@@ -18,8 +25,8 @@ class Profile extends Component {
               />
             </div>
           </div>
-          <div class="card2">
-            <div class="card2-inner">
+          <div className="card2">
+            <div className="card2-inner">
               <h2 id="h1P">Harper Foley</h2>
               <img
                 src="https://avatars.githubusercontent.com/u/109574453?v=4"
@@ -36,8 +43,3 @@ class Profile extends Component {
 };
 
 export default Profile;
-/* <h1 id="creatorPTag">The Creators of this App</h1>
-        <img
-          src="https://canvas.instructure.com/images/thumbnails/192514569/aOgSuk7awEL0LkrYDJnP93jKMGExe1TSHNVEMfak"
-          alt="Creator PFP placeholder"
-        /> */

@@ -1,0 +1,54 @@
+#neonShadow {
+    height: 40px;
+    width: 175px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    justify-content: center;
+    font-weight: 500;
+    color: white;
+    font-size: 15px;
+}
+
+#span2 {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    padding-top: 5%;
+    padding-right: 2.5%;
+    margin-right: 0px;
+    font-size: 13px;
+    transition: 0.3s;
+    opacity: 1;
+    display: inline-block;
+}
+
+#span2:hover {
+    transition: 0.3s;
+    opacity: 1;
+    font-weight: 700;
+    animation: glow 1s infinite;
+    color: red;
+}
+
+#neonShadow:hover {
+    /* transform: translateX(-20px)rotate(30deg); */
+    border-radius: 5px;
+    background-color: black;
+    transition: 0.5s;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 5px 5px 20px rgb(248, 33, 37), -5px -5px 20px rgb(248, 33, 37);
+    }
+
+    50% {
+        box-shadow: 5px 5px 20px yellow, -5px -5px 20px yellow
+    }
+
+    100% {
+        box-shadow: 5px 5px 20px rgb(248, 33, 37), -5px -5px 20px rgb(248, 33, 37)
+    }
+}

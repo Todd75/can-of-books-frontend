@@ -9,10 +9,10 @@ class Header extends React.Component {
       
       <Navbar collapseOnSelect id="entireNavBar">
         {/* <Navbar.Brand id="navHeader">My Favorite Books</Navbar.Brand> */}
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <h1 class="animate-charcter">A Collection Of Our Favorite Books</h1>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <h1 className="animate-charcter">A Collection Of Our Favorite Books</h1>
             </div>
           </div>
         </div>

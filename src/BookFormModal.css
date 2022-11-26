@@ -1,0 +1,63 @@
+div.modal-content {
+    text-align: center;
+    background: linear-gradient(298deg, #f3dec1, #fdfcfb, #f3dec1);
+    background-size: 600% 600%;
+    animation: AnimationName 22s ease infinite;
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 15%
+    }
+
+    50% {
+        background-position: 100% 86%
+    }
+
+    100% {
+        background-position: 0% 15%
+    }
+}
+
+.modal-header {
+    text-align: center;
+}
+
+#addHeader {
+    border: none;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#status {
+    background-color: rgba(200, 184, 184, 0.25);
+    font-style: italic;
+    border: none;
+}
+
+#description {
+    background-color: rgba(200, 184, 184, 0.25);
+    font-style: italic;
+    border: none;
+}
+
+#title {
+    background-color: rgba(200, 184, 184, 0.25);
+    font-style: italic;
+    border: none;
+}
+
+#modalUpdateBookHeader {
+    font-size: 23px;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+#submitBookBtn {
+    background: linear-gradient(0deg, rgb(143, 205, 232) 0%, rgb(39, 75, 123) 100%);
+    font-weight: 400;
+}

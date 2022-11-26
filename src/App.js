@@ -65,7 +65,7 @@ class App extends React.Component {
                 openUpdateBookModal={this.handleOpenUpdateBookModal} />
               }
             >
-              
+
             </Route>
             <Route
               path="/about.js"
@@ -75,7 +75,7 @@ class App extends React.Component {
 
           </Routes>
           <div id="addBookBtnDiv">
-            <button onClick={(this.handleOpenAddBookModal)} class="custom-btn btn-12" ><span>Click Here!</span><span>Add Book</span></button>
+            <button onClick={(this.handleOpenAddBookModal)} className="custom-btn btn-12" ><span>Click Here!</span><span>Add Your Book</span></button>
           </div>
           <Footer />
         </Router>
