@@ -10,19 +10,25 @@ Books are life-changing. They have the power to enlighten, educate, entertain, h
 
 Clone this repo to your own account with the green "Use this template" button. Then, add any collaborators. Now you are ready to start adding features! Deploy your site to let the world know which books have had the greatest impact on you, and what's recommended. Enjoy!
 
-## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+## Professional Pairing Practice/ Our Agreement
 
-## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+### Logistical
 
-## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+Hours of communication: Open ~ Communication platforms: Slack, Phone ~ Breaks: once an hour ~ Fall behind plan: Don’t worry, ask a TA for help and see if we can fit in some extra time that day or do some work on the weekend.
 
-## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
+### Cooperation
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+Todd's strengths:  CSS, JavaScript, HTML, research skills.  Harper's strengths: JavaScript, React, Node.js, time management, overall planning. The best way to utilize these skills is for Harper to explain the React and Server layout while I type the code and for me to do the same with CSS/FrontEnd while Harper type's the code. Todd needs to improve understanding of passing state and props and React while Harper just needs to improve his CSS layout. We plan to work together for the entirety of the project and pair program so we can learn from each other's strengths.
+
+### Conflict Resolution
+
+What will your team do if one person is pulling all the weight while the other person is not contributing:
+
+Since we are pair programming the project this shouldn't be a concern the idea was to capitalize on each other's strengths by explaining to the other while we did it so they could learn and understand the code. If we have that issue for some reason a conversation will be had about it.
+
+How will you approach each other and the challenge of building an application knowing that it is impossible for two people to be at the exact same place in understanding and skill level:
+
+We recognized that and decided to pair program for that reason, because you are only as strong as your weakest team member we tried to learn from each other's skill sets. Plan to ask for help from TA's when stumped and frustration breaks as needed.
 
 ## Estimates
 <!-- See below -->
@@ -35,7 +41,7 @@ Unsplash.com provided the background image used for books.
 
 Main page background animation via CodePen from Alvaro who had free use code for anyone who follows him. I used his format then integrated and modified the code to suit the changes I wanted in timing.
 
-
+Footer animation was taken via CodePen from Philip Zastrow free use for anyone. I implimented the code then modified the colors, speed, containers, and rotation angles. 
 
 
 
@@ -75,9 +81,8 @@ Main page background animation via CodePen from Alvaro who had free use code for
 * **Finish time:** 1:49
 * **Actual time needed to complete:** :49
 
-
-<!-- * **Name of feature:**
-* **Estimate of time needed to complete:**
-* **Start time:**
-* **Finish time:**
-* **Actual time needed to complete:** -->
+* **Name of feature:** front end css
+* **Estimate of time needed to complete:** 12 hours
+* **Start time:** Wed.
+* **Finish time:** Sat.
+* **Actual time needed to complete:** about 8 hours including research time
