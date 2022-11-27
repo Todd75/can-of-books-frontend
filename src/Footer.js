@@ -1,12 +1,17 @@
 import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
+import './Footer.css'
+
 
 class Footer extends React.Component {
+
+
   render() {
     return (
-      <Navbar collapseOnSelect expand="" id="footerNav">
-        <Navbar.Brand>&copy; Harper Foley & TCW, 2022</Navbar.Brand>
-      </Navbar>
+      <>
+        <footer id="footer" >
+          <p className="lightsCity" id="footerPTag">&copy; Harper Foley & Todd Wolden, 2022</p>
+        </footer>
+      </>
     )
   }
 }
