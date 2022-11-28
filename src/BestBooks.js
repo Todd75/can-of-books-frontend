@@ -173,6 +173,7 @@ class BestBooks extends React.Component {
           show={this.props.showAddBookModal}
           onHide={this.props.closeAddBookModal}
           submit={this.handleBookSubmit}
+          showAddBookModal={this.state.isAddBookModalShown}
         />
 
         <UpdateBookForm
@@ -181,7 +182,7 @@ class BestBooks extends React.Component {
           submit={this.handleUpDateBookSubmit}
           books={this.state.books}
         />
-
+        
       </>
     )
   }

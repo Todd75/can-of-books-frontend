@@ -69,7 +69,13 @@ class App extends React.Component {
             </Route>
             <Route
               path="/about.js"
-              element={<About />}
+              element={<About 
+                showAddBookModal={this.state.isAddBookModalShown}
+                closeAddBookModal={this.handleCloseAddBookModal}
+                showUpdateBookModal={this.state.isUpdateBookModalShown}
+                closeUpdateBookModal={this.handleCloseUpdateBookModal}
+                openUpdateBookModal={this.handleOpenUpdateBookModal}
+              />}
             >
             </Route>
 
