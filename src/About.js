@@ -1,6 +1,6 @@
 import './About.css'
 import { Component } from "react";
-import './BookFormModal.js'
+import BookFormModal from './BookFormModal.js'
 
 class Profile extends Component {
 
@@ -36,6 +36,11 @@ class Profile extends Component {
             </div>
           </div>
         </span>
+        <BookFormModal
+          show={this.props.showAddBookModal}
+          onHide={this.props.closeAddBookModal}
+          submit={this.props.handleBookSubmit}
+        />
       </>
     )
 

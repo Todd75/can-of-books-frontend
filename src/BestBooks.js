@@ -45,7 +45,7 @@ class BestBooks extends React.Component {
     try {
       let postResult = await axios.post(url, aBook);
       this.setState({
-        books: [...this.state.books, postResult]
+        books: [...this.state.books, postResult.data]
       });
     } catch (err) {
       console.log(err);
@@ -173,6 +173,7 @@ class BestBooks extends React.Component {
           show={this.props.showAddBookModal}
           onHide={this.props.closeAddBookModal}
           submit={this.handleBookSubmit}
+          showAddBookModal={this.state.isAddBookModalShown}
         />
 
         <UpdateBookForm
@@ -181,7 +182,7 @@ class BestBooks extends React.Component {
           submit={this.handleUpDateBookSubmit}
           books={this.state.books}
         />
-
+        
       </>
     )
   }
