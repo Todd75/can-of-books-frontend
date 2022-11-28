@@ -168,6 +168,9 @@ class BestBooks extends React.Component {
         ) : (
           <h3>No Books Found</h3>
         )}
+        <div id="addBookBtnDiv">
+          <button onClick={(this.handleOpenAddBookModal)} className="custom-btn btn-12" ><span>Click Here!</span><span>Add Your Book</span></button>
+        </div>
         <BookFormModal
           show={this.props.showAddBookModal}
           onHide={this.props.closeAddBookModal}

@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Button, Modal } from 'react-bootstrap';
 import './App.css';
 import './BookFormModal.css'
-// import GridLayout from "react-grid-layout";
+
 
 class BookFormModal extends React.Component {
 
