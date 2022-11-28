@@ -1,7 +1,6 @@
 import './About.css'
 import { Component } from "react";
 import BookFormModal from './BookFormModal.js'
-import BestBooks from './BestBooks.js'
 
 class Profile extends Component {
 
