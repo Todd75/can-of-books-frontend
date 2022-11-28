@@ -74,7 +74,10 @@ class App extends React.Component {
             </Route>
 
           </Routes>
-          
+          <div id="addBookBtnDiv">
+            <button onClick={(this.handleOpenAddBookModal)} className="custom-btn btn-12" ><span>Click Here!</span><span>Add Your Book</span></button>
+          </div>
+
           <Footer />
         </Router>
       </>
