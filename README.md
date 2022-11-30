@@ -84,3 +84,9 @@ Footer animation was taken via CodePen from Philip Zastrow free use for anyone. 
 * **Start time:** Wed.
 * **Finish time:** Sat.
 * **Actual time needed to complete:** about 8 hours including research time
+
+* **Name of feature:** login feature
+* **Estimate of time needed to complete:** 2 hours
+* **Start time:** 2:30 pm
+* **Finish time:** 5 pm
+* **Actual time needed to complete:** 2.5 hours
