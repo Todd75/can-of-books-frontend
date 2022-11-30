@@ -10,18 +10,18 @@ class Content extends React.Component {
 
             const jwt = res.__raw;
             console.log(jwt);
-            let url = `${process.env.REACT_APP_SERVER_URL}/books`;
-            let bookResults = await axios.get(url);
-            // let config = {
-            //    method: 'get',
-            //    baseURL = process.env.REACT_APP_SERVER_URL,
-            //    url: '/books',
-            //    headers: {
-            //    "Authorization": `Bearer ${jwt}`
-            // }
-            // }
-            //    let bookResults = await axios(config);
-            console.log(bookResults);
+            // let url = `${process.env.REACT_APP_SERVER_URL}/books`;
+            // let bookResults = await axios.get(url);
+            let config = {
+               method: 'get',
+               baseURL: process.env.REACT_APP_SERVER_URL,
+               url: '/books',
+               headers: {
+               "Authorization": `Bearer ${jwt}`
+            }
+            }
+               let bookResults = await axios(config);
+            
         }
     }
 

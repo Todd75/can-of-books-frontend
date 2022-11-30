@@ -4,7 +4,7 @@ import BookFormModal from './BookFormModal.js';
 import UpdateBookForm from './UpdateBookForm.js';
 import Image from 'react-bootstrap/Image'
 import './App.css'
-
+import { withAuth0 } from '@auth0/auth0-react';
 
 
 let axios = require('axios');
@@ -27,16 +27,32 @@ class BestBooks extends React.Component {
   /* TODO: Make a GET request to your API to fetch all the books from the database  */
 
   getBooks = async () => {
-    let url = `${process.env.REACT_APP_SERVER_URL}/books`;
-    try {
-      let result = await axios.get(url);
-
-      this.setState({ books: result.data });
-      this.setState({ error: false });
-
-    } catch (error) {
-      console.error(error);
-      this.setState({ error: true });
+    // let url = `${process.env.REACT_APP_SERVER_URL}/books`;
+    if (this.props.auth0.isAuthenticated) {
+      
+      try {
+        const res = await this.props.auth0.getIdTokenClaims();
+        const jwt = res.__raw;
+        console.log(jwt);
+        // let url = `${process.env.REACT_APP_SERVER_URL}/books`;
+        // let bookResults = await axios.get(url);
+        let config = {
+          method: 'get',
+          baseURL: process.env.REACT_APP_SERVER_URL,
+          url: '/books',
+          headers: {
+            "Authorization": `Bearer ${jwt}`
+          }
+        }
+        
+        let result = await axios(config);
+        this.setState({ books: result.data });
+        this.setState({ error: false });
+        
+      } catch (error) {
+        console.error(error);
+        this.setState({ error: true });
+      }
     }
   };
 
@@ -114,7 +130,7 @@ class BestBooks extends React.Component {
       console.log('Error: ', error.response.data);
     }
   }
-  
+
   render() {
 
     return (
@@ -168,7 +184,7 @@ class BestBooks extends React.Component {
         ) : (
           <h3>No Books Found</h3>
         )}
-        
+
         <BookFormModal
           show={this.props.showAddBookModal}
           onHide={this.props.closeAddBookModal}
@@ -182,11 +198,11 @@ class BestBooks extends React.Component {
           submit={this.handleUpDateBookSubmit}
           books={this.state.books}
         />
-        
+
       </>
     )
   }
 }
 
 
-export default BestBooks;
+export default withAuth0(BestBooks);
